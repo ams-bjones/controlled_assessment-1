@@ -17,6 +17,11 @@ def ask(direction):
 cfrom=ask("from")-1
 cto=ask("to")-1
 
+def tell(change):
+    print ("##################################")
+    print ("Or you can change your currency amount")
+    convert = int(input("Enter change to do so:"))
+
 entry=float(input("You have selected {0}. Now please enter a sum of money:".format(curency[cfrom])))
 answer= (entry/rates[cfrom])*rates[cto]
 print ("{0:.2f}".format(answer))
