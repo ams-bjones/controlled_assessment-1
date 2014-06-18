@@ -1,31 +1,39 @@
-curency=["GBP", "USD", "JPY", "EUR"]
-rates = [1,2,3,4]
-print ("Welcome to the Currency converter")
-def ask(direction):
-    print ("##################################")
-    print ("Please pick a currency to convert {0}".format(direction))
-    print ("##################################")
-    
-        
-    print("Pound", rates[0])
-    print("Dollar", rates[1])
-    print("Yen", rates[2])
-    print("Euro", rates[3])
-    choice = int(input("Enter choice(1/2/3/4):"))
-    return (choice)
+#http://stackoverflow.com/questions/20398017/showing-decimal-places-python-2-7-and-decimal-datatype#
+#setup the decimal data type (including number of decimal places)
+import decimal
 
-cfrom=ask("from")-1
-cto=ask("to")-1
+#get the current value and type from the user
+currencyAmount = decimal.Decimal(raw_input('please enter the amount: '))
+currencyType = int(raw_input('please enter the type or if you want to change the rates (1 = pound, 2 = euro, 3 = dollar, 4 = yen): '))
 
-def tell(change):
-    print ("##################################")
-    print ("Or you can change your currency amount")
-    convert = int(input("Enter change to do so:"))
+#set the exchange rates (based on sterling)
+euro = decimal.Decimal('1.2')
+dollar = decimal.Decimal('1.6')
+yen = decimal.Decimal('200')
 
-entry=float(input("You have selected {0}. Now please enter a sum of money:".format(curency[cfrom])))
-answer= (entry/rates[cfrom])*rates[cto]
-print ("{0:.2f}".format(answer))
+#convert the currency into pound sterling
+if (currencyType == 2):
+    currencyAmount = currencyAmount / euro
+elif (currencyType == 3):
+    currencyAmount = currencyAmount / dollar
+elif (currencyType == 4):
+    currencyAmount = currencyAmount / yen
 
+#ask the user what currency they want it converted into
+currencyConvert = int(raw_input('please enter the currency you would like to convert to (1 = pound, 2 = euro, 3 = dollar, 4 = yen): '))
+
+#convert the currency into the new format (pound already done in previous steps)
+if (currencyConvert == 2):
+    currencyAmount = currencyAmount * euro
+elif (currencyConvert == 3):
+    currencyAmount = currencyAmount * dollar
+elif (currencyConvert == 4):
+    currencyAmount = currencyAmount * yen
+
+#show the amount of money converted to user
+print 'the result of the currency conversion was ',  currencyAmount.quantize(decimal.Decimal('0.00'))
+
+# This was the first code for the convert
 # if choice == rates[0]:
 #     entry= input("You have selected Pounds. Now please enter a sum of money:")
 #     answer = (entry*rates[0])
