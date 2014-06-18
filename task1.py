@@ -10,6 +10,7 @@ currencyType = int(raw_input('please enter the type or if you want to change the
 euro = decimal.Decimal('1.2')
 dollar = decimal.Decimal('1.6')
 yen = decimal.Decimal('200')
+#This will multiply the 2 numbers that you want to convert 
 
 #convert the currency into pound sterling
 if (currencyType == 2):
@@ -18,10 +19,11 @@ elif (currencyType == 3):
     currencyAmount = currencyAmount / dollar
 elif (currencyType == 4):
     currencyAmount = currencyAmount / yen
+#Tells the computer if a number 1 to 4 is picked it will run ethier pound, euro, yen or dollars 
 
 #ask the user what currency they want it converted into
 currencyConvert = int(raw_input('please enter the currency you would like to convert to (1 = pound, 2 = euro, 3 = dollar, 4 = yen): '))
-
+#it then takes the numbers 1 to 4 and runs what the number is linked to.
 #convert the currency into the new format (pound already done in previous steps)
 if (currencyConvert == 2):
     currencyAmount = currencyAmount * euro
