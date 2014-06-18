@@ -31,7 +31,6 @@ elif (currencyConvert == 3):
     currencyAmount = currencyAmount * dollar
 elif (currencyConvert == 4):
     currencyAmount = currencyAmount * yen
-
 #show the amount of money converted to user
 print 'the result of the currency conversion was ',  currencyAmount.quantize(decimal.Decimal('0.00'))
 
