@@ -28,22 +28,19 @@ while answer not in ["1", "2"]:
 #Creating a file into the address book and saving it for later
 if answer == "1" : 
     print (" You have selected to create an entry.")
-    # collects information
 
+#Now it asks the user info on the person so it is easier to find them
     lastname = raw_input("What is the persons last name? ")
     firstname = raw_input("What is the persons first name? ")
     phone = raw_input("What is the persons phone number? ")
     email = raw_input("What is the persons email address? ")
     address = raw_input("What is the persons address? ")
 
-    #create or append datafile.txt
+    #This line tells the computer to open/create a file
 
     tempfile = open("datafile.txt","a")
     
-    #create string to print to file
-    #print tempfile
-    #print (firstname + " " + lastname + ", " + phone + ", " + email + ", " + address) 
-
+    #adds the first name, last name, phone, email and address to the address book
     tempfile.write(firstname + " " + lastname + ", " + phone + ", " + email + ", " + address)
     tempfile.write("\n")
     tempfile.close()
@@ -54,12 +51,15 @@ if answer == "1" :
 if answer == "2":
     choice = raw_input("you have selected to search for an entry. Would you like to search by surnames [Press 1] \n Or by month of birth [Press 2]")
     
+#asks the user to input the lastname of someone. once done it then searchs the system for anyone with the last name
+#after that it then gives you the list of people with that last name along with their info
 if choice == "1":
     surname_search = raw_input("What surname are you searching for?: ")
     for address in addressses:
         if surname_search == address[0]:
             print address
-
+            
+#Pretty much the same as the choice 1 but you're looking for the birth month
 if choice == "2":
     month_search = raw_input("What month are you searching for? \n(in numbers E.G 01=january)")
     for address in addressses:
