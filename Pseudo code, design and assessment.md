@@ -5,9 +5,9 @@
 
 ###Money converter
 
-a) The system should be able to have exchange rates changed regulary by the user
-b) The user must input an amount, select a currency to convert from and to, and get the correct output
-c) The amount must be put to two decimal places E.G £1.09
+1. The system should be able to have exchange rates changed regulary by the user
+1. The user must input an amount, select a currency to convert from and to, and get the correct output
+1. The amount must be put to two decimal places E.G £1.09
 
 
 
@@ -108,16 +108,16 @@ Task 1 PASSED
 
 ###Address book
 
-a) A surname and first name
-b) Two lines of the address and the post code
-c) A telephone number
-d) Date of birth
-e) Email address
+1. A surname and first name
+1. Two lines of the address and the post code
+1. A telephone number
+1. Date of birth
+1. Email address
 
 Search with:
 
-a) By surname to retrieve and display the details for a contact
-b) By the date of birth to retrieve and display all contacts with a birthday in a particular month
+1. By surname to retrieve and display the details for a contact
+1. By the date of birth to retrieve and display all contacts with a birthday in a particular month
 
 
 ###Pseudo code
@@ -235,8 +235,8 @@ Task 2 PASSED
 
 ###ISBN
 
-a) The number entered must be correct length
-b) Only contains the digits 0 to 9
+1. The number entered must be correct length
+1. Only contains the digits 0 to 9
 
 
 ###Pseudo code
