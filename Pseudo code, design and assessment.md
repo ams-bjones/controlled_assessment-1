@@ -1,20 +1,19 @@
-controlled_assessment
-=====================
+#controlled_assessment
 
-Task 1
-=====================
+##Task 1
 
-Money converter
+
+###Money converter
 
 a) The system should be able to have exchange rates changed regulary by the user
 b) The user must input an amount, select a currency to convert from and to, and get the correct output
 c) The amount must be put to two decimal places E.G £1.09
 
----------------------
 
-Pseudo code
----------------------
 
+###Pseudo code
+
+```
 It will ask for what money you want to convert from.
 It asks for the numbers 1 to 4.
 This means if the user inputs 1 its pounds, if the user inputs 2 its euros and so on.
@@ -24,15 +23,15 @@ It then takes the numbers (Rates) and multiplys then together.
 It then prints out the answer.
 The answer is the value of the two numbers you just multiplyed.
 If you enter you want to convert from pounds, to pounds it just prints the number you entered.
-
+```
 This is my plan to make task one work.
 
----------------------
 
-Attemt 1 (FAILED)
----------------------
+
+###Attemt 1 (FAILED)
 
 This was the first code for the convert
+```python
 if choice == rates[0]:
    entry= input("You have selected Pounds. Now please enter a sum of money:")
    answer = (entry*rates[0])
@@ -52,12 +51,12 @@ if choice == rates[3]:
    entry= input("You have selected Euro. Now please enter a sum of money:")
    answer = (entry*rates[3])
    print(answer)
-   
----------------------
+```
 
-Attemt 2 (PASSED)
----------------------
 
+###Attemt 2 (PASSED)
+
+```python
 #http://stackoverflow.com/questions/20398017/showing-decimal-places-python-2-7-and-decimal-datatype#
 #setup the decimal data type (including number of decimal places)
 import decimal
@@ -94,6 +93,7 @@ elif (currencyConvert == 4):
 
 #show the amount of money converted to user
 print 'the result of the currency conversion was ',  currencyAmount.quantize(decimal.Decimal('0.00'))
+```
 
 Task 1 was one of the hardest tasks partly because of trying to convert to numbers.
 It took a while but i finaly got it. After that it was easy.
@@ -101,12 +101,12 @@ Just put some words to print to the user to make it look pretty.
 
 Task 1 PASSED
 
-=====================
 
-Task 2
-=====================
 
-Address book
+##Task 2
+
+
+###Address book
 
 a) A surname and first name
 b) Two lines of the address and the post code
@@ -119,11 +119,9 @@ Search with:
 a) By surname to retrieve and display the details for a contact
 b) By the date of birth to retrieve and display all contacts with a birthday in a particular month
 
----------------------
 
-Pseudo code
----------------------
-
+###Pseudo code
+```
 Welcome the user to the address book     
 The address book will then ask the user to input two number to select if they want to add or search for an address
 If the user clicks 1 they will be taken to the address adder
@@ -143,12 +141,12 @@ If 2 is pressed then it will search with the date of birth
 The user must input the numbers 01 to 12
 The numbers the user has input to the computer will then be used to search for the date of birth
 The computer will then print all of the contacts with the same date
+```
 
----------------------
 
-Task 2 (PASSED)
----------------------
+###Task 2 (PASSED)
 
+```python
 # surnames = {
 #     "Jackson": ["Samantha Jackson", "2 Heather Row", "Basingstoke", "RG21 3SD", "01256 135434",	"23/04/1973", "sam.jackson@hotmail.com"]
 #     "VickersJ": ["Jonathan",	"18 Saville Gardens", "Reading", "RG3 5FH",	"01196 678254",	"04/02/1965", "the_man@btinternet.com"]
@@ -227,24 +225,23 @@ Up to a point were the search line is.
 The search part of the code was one of the worst to overcome.
 I think it was because i was over thinking it.
 But now its fixed and task 2 is complete
-
+```
 Task 2 PASSED
 
-=====================
 
-Task 3
-=====================
 
-ISBN
+##Task 3
+
+
+###ISBN
 
 a) The number entered must be correct length
 b) Only contains the digits 0 to 9
 
----------------------
 
-Pseudo code
----------------------
+###Pseudo code
 
+```
 Asks the user to input two numbers
 If 2 pressed the programme is ended
 If 1 is pressed the code goes on
@@ -252,12 +249,10 @@ It asks the to input a 10 digit number
 If the digit number is not 10 it then loops to enter a 10 digit number
 Once the user has input a 10 digit number the maths side of the code works out the number
 The end result it the output to the user
+```
 
----------------------
-
-Task 3 (PASSED)
----------------------
-
+###Task 3 (PASSED)
+```python
 #Tells the user to choose between starting or ending the programme
 decision = str(input(""" What would you like to do?; 
 1) Convert a 10 digit number to an ISBN number(1) 
@@ -306,5 +301,5 @@ print('The ISBN number is -->    ' + ISBNNumber)
 
 The hardest part of the code was the maths part but nothing else was that bad.
 It was pretty easy.
-
+```
 Task 3 PASSED
